@@ -13,3 +13,18 @@
     font-weight: 500;
   }
 }
+
+html,
+body,
+#__next {
+  @apply h-full;
+}
+
+body {
+  @apply flex justify-center bg-neutral-100;
+}
+
+#__next {
+  @apply flex w-full max-w-lg flex-col p-8 space-y-8 justify-between text-neutral-700;
+  position: relative;
+}
