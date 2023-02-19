@@ -1,4 +1,4 @@
-import { render, screen, act, renderHook } from '@testing-library/react';
+import { render, screen, act, renderHook, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import Header from 'components/Header';
@@ -36,5 +36,38 @@ describe('Header', () => {
 
     act(() => screen.getByTestId('header-solve').click());
     expect(solve).toHaveBeenCalled();
+  });
+
+  it('should render time correctly', async () => {
+    vi.useFakeTimers();
+    act(() => {
+      const startedAt = new Date();
+      startedAt.setHours(startedAt.getHours() - 1);
+      startedAt.setMinutes(startedAt.getMinutes() - 1);
+      startedAt.setSeconds(startedAt.getSeconds() - 1);
+      boardStore.setState({ startedAt: startedAt.getTime() });
+    });
+
+    const { rerender } = render(<Header />);
+
+    expect(screen.getByText('1:1:01')).toBeInTheDocument();
+    act(() => vi.advanceTimersByTime(1000));
+    rerender(<Header />);
+    expect(screen.getByText('1:1:02')).toBeInTheDocument();
+    vi.useRealTimers();
+  });
+
+  it('should render completed time correctly', () => {
+    act(() => {
+      const startedAt = new Date();
+      startedAt.setHours(startedAt.getHours() - 1);
+      startedAt.setMinutes(startedAt.getMinutes() - 1);
+      startedAt.setSeconds(startedAt.getSeconds() - 1);
+      boardStore.setState({ startedAt: startedAt.getTime(), completedAt: Date.now() });
+    });
+
+    render(<Header />);
+
+    expect(screen.getByText('1:1:01')).toBeInTheDocument();
   });
 });
