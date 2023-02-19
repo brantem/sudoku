@@ -7,7 +7,7 @@ import { useSudokuStore } from 'lib/stores';
 
 const Header = () => {
   const { isSolved, solve, generate } = useSudokuStore((state) => ({
-    isSolved: state.isSolved,
+    isSolved: state.filled === 81,
     solve: state.solve,
     generate: state.generate,
   }));

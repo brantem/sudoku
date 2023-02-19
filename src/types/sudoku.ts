@@ -6,4 +6,6 @@ export enum Difficulty {
   Insane = 25,
 }
 
+export type Coord = [number, number];
 export type Cell = [number, number];
+export type Board = Cell[][];

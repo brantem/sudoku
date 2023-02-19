@@ -7,7 +7,7 @@ import { sudokuStore, useSudokuStore } from 'lib/stores';
 
 describe('Header', () => {
   afterEach(() => {
-    act(() => sudokuStore.setState({ isSolved: false }));
+    act(() => sudokuStore.setState({ filled: 0 }));
   });
 
   it('should generate board', () => {
@@ -21,7 +21,7 @@ describe('Header', () => {
   });
 
   it('should not show solve button if board is solved', () => {
-    act(() => sudokuStore.setState({ isSolved: true }));
+    act(() => sudokuStore.setState({ filled: 81 }));
 
     render(<Header />);
 

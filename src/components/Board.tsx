@@ -11,14 +11,14 @@ const Board = () => {
 
   return (
     <div className="flex flex-col overflow-hidden rounded-xl border-[3px] border-neutral-500">
-      {[...new Array(size)].map((_, i) => (
-        <div key={i} className={cn('flex', i > 0 && i % 3 === 0 && 'border-t-2 border-neutral-400')}>
-          {[...new Array(size)].map((_, j) => {
-            const cell = board.length ? board[i][j] : [0, 0];
+      {[...new Array(size)].map((_, x) => (
+        <div key={x} className={cn('flex', x > 0 && x % 3 === 0 && 'border-t-2 border-neutral-400')}>
+          {[...new Array(size)].map((_, y) => {
+            const cell = board.length ? board[x][y] : [0, 0];
             const value = cell[1] < 0 ? cell[0] : cell[1] === 0 ? '' : cell[1];
 
             const isFilled = cell[1] + cell[0] === 0;
-            const isActive = coord ? coord[0] === i && coord[1] === j : false;
+            const isActive = coord ? coord[0] === x && coord[1] === y : false;
 
             const activeCell = coord && board[coord[0]][coord[1]];
             const shouldActive = activeCell
@@ -27,21 +27,21 @@ const Board = () => {
 
             return (
               <button
-                key={j}
+                key={y}
                 className={cn(
                   'flex h-9 flex-1 items-center justify-center border-neutral-400 bg-white text-2xl font-semibold sm:h-12 sm:text-3xl',
-                  j > 0 && 'border-l',
-                  i % 3 !== 0 && 'border-t',
-                  j > 0 && j % 3 === 0 && 'border-l-2',
-                  isFilled && 'bg-neutral-200',
+                  y > 0 && 'border-l',
+                  x % 3 !== 0 && 'border-t',
+                  y > 0 && y % 3 === 0 && 'border-l-2',
+                  (isFilled || value === cell[0]) && 'bg-neutral-200',
                   shouldActive || isActive
-                    ? 'bg-blue-200/75'
+                    ? 'bg-blue-200/50'
                     : isFilled
                     ? 'hover:bg-neutral-200/50'
                     : 'hover:bg-blue-50',
                 )}
                 data-active={shouldActive || isActive}
-                onClick={() => setCoord([i, j])}
+                onClick={() => setCoord([x, y])}
               >
                 {value}
               </button>
