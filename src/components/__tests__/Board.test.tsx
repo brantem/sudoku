@@ -3,12 +3,12 @@ import '@testing-library/jest-dom';
 
 import Board from 'components/Board';
 
-import { boardStore, useBoardStore } from 'lib/stores';
+import { sudokuStore, useSudokuStore } from 'lib/stores';
 
 describe('Board', () => {
   afterEach(() => {
     act(() =>
-      boardStore.setState({
+      sudokuStore.setState({
         board: [
           [
             [1, -1],
@@ -38,7 +38,7 @@ describe('Board', () => {
   });
 
   it('should set coord', () => {
-    const { result } = renderHook(() => useBoardStore());
+    const { result } = renderHook(() => useSudokuStore());
     const setCoord = vi.spyOn(result.current, 'setCoord').mockImplementationOnce(() => {});
 
     render(<Board />);
@@ -49,7 +49,7 @@ describe('Board', () => {
 
   it('should activate other cells with the same value', () => {
     act(() =>
-      boardStore.setState({
+      sudokuStore.setState({
         board: [
           [
             [1, -1],
@@ -62,7 +62,7 @@ describe('Board', () => {
         ],
       }),
     );
-    const { result } = renderHook(() => useBoardStore());
+    const { result } = renderHook(() => useSudokuStore());
 
     render(<Board />);
 

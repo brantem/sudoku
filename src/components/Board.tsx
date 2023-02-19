@@ -1,8 +1,8 @@
 import { cn } from 'lib/helpers';
-import { useBoardStore } from 'lib/stores';
+import { useSudokuStore } from 'lib/stores';
 
 const Board = () => {
-  const { board, coord, setCoord } = useBoardStore((state) => ({
+  const { board, coord, setCoord } = useSudokuStore((state) => ({
     board: state.board,
     coord: state.coord,
     setCoord: state.setCoord,

@@ -1,6 +1,6 @@
 import { BackspaceIcon } from '@heroicons/react/24/solid';
 
-import { useBoardStore } from 'lib/stores';
+import { useSudokuStore } from 'lib/stores';
 
 export type KeyboardButtonProps = {
   onClick: () => void;
@@ -17,7 +17,7 @@ const KeyboardButton = (props: KeyboardButtonProps) => {
 };
 
 const Keyboard = () => {
-  const updateCell = useBoardStore((state) => state.updateCell);
+  const updateCell = useSudokuStore((state) => state.updateCell);
 
   return (
     <div className="grid-row-2 grid grid-cols-5 gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200">

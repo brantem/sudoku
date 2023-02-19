@@ -1,1 +1,1 @@
-export * from 'lib/stores/board';
+export * from 'lib/stores/sudoku';

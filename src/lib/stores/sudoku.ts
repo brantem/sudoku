@@ -3,11 +3,14 @@ import { useStore } from 'zustand';
 import { createStore } from 'zustand/vanilla';
 import { persist } from 'zustand/middleware';
 
-import { Cell } from 'types/board';
+import { Cell, Difficulty } from 'types/sudoku';
 
-type BoardState = {
+type SudokuState = {
   startedAt: number | null;
   completedAt: number | null;
+  difficulty: Difficulty;
+  setDifficulty: (difficulty: number) => void;
+
   board: Cell[][];
   generate: () => void;
   solve: () => void;
@@ -18,11 +21,14 @@ type BoardState = {
   updateCell: (value: number) => void;
 };
 
-export const boardStore = createStore<BoardState>()(
+export const sudokuStore = createStore<SudokuState>()(
   persist(
     (set, get) => ({
       startedAt: null,
       completedAt: null,
+      difficulty: Difficulty.Easy,
+      setDifficulty: (difficulty) => set({ difficulty }),
+
       board: [],
       generate: () => {
         set({
@@ -258,6 +264,9 @@ export const boardStore = createStore<BoardState>()(
 const dummy = {
   startedAt: null,
   completedAt: null,
+  difficulty: Difficulty.Easy,
+  setDifficulty: () => {},
+
   board: [],
   generate: () => {},
   solve: () => {},
@@ -269,10 +278,10 @@ const dummy = {
 };
 
 // https://github.com/pmndrs/zustand/issues/1145
-export function useBoardStore(): BoardState;
-export function useBoardStore<T>(selector: (state: BoardState) => T, equals?: (a: T, b: T) => boolean): T;
-export function useBoardStore(selector?: any, equals?: any) {
-  const store = useStore(boardStore, selector, equals);
+export function useSudokuStore(): SudokuState;
+export function useSudokuStore<T>(selector: (state: SudokuState) => T, equals?: (a: T, b: T) => boolean): T;
+export function useSudokuStore(selector?: any, equals?: any) {
+  const store = useStore(sudokuStore, selector, equals);
   const [isHydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
   return isHydrated ? store : selector ? selector(dummy) : dummy;

@@ -3,11 +3,11 @@ import '@testing-library/jest-dom';
 
 import Keyboard from 'components/Keyboard';
 
-import { useBoardStore } from 'lib/stores';
+import { useSudokuStore } from 'lib/stores';
 
 describe('Keyboard', () => {
   it('should update cell', () => {
-    const { result } = renderHook(() => useBoardStore());
+    const { result } = renderHook(() => useSudokuStore());
     const updateCell = vi.spyOn(result.current, 'updateCell').mockImplementation(() => {});
 
     render(<Keyboard />);
