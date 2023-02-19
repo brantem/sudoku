@@ -18,10 +18,10 @@ describe('Time', () => {
 
     const { rerender } = render(<Time />);
 
-    expect(screen.getByText('1:1:01')).toBeInTheDocument();
+    expect(screen.getByText('1:01:01')).toBeInTheDocument();
     act(() => vi.advanceTimersByTime(1000));
     rerender(<Time />);
-    expect(screen.getByText('1:1:02')).toBeInTheDocument();
+    expect(screen.getByText('1:01:02')).toBeInTheDocument();
     vi.useRealTimers();
   });
 
@@ -36,6 +36,6 @@ describe('Time', () => {
 
     render(<Time />);
 
-    expect(screen.getByText('1:1:01')).toBeInTheDocument();
+    expect(screen.getByText('1:01:01')).toBeInTheDocument();
   });
 });

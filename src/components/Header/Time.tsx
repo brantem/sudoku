@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useSudokuStore } from 'lib/stores';
-import { getTimeDiff } from 'lib/helpers';
+import { getTimeDiff, padStart } from 'lib/helpers';
 
 const Time = () => {
   const { startedAt, completedAt } = useSudokuStore((state) => ({
@@ -29,8 +29,7 @@ const Time = () => {
 
   return (
     <div className="flex h-8 items-center rounded-full border bg-white px-3 tabular-nums">
-      {data.hours > 0 ? data.hours + ':' : ''}
-      {data.minutes}:{data.seconds.toString().padStart(2, '0')}
+      {data.hours ? `${data.hours}:${padStart(data.minutes, 2, '0')}` : data.minutes}:{padStart(data.seconds, 2, '0')}
     </div>
   );
 };

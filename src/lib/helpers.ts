@@ -13,3 +13,7 @@ export const getTimeDiff = (a: number, b: number) => {
     seconds: Math.floor((v % (1000 * 60)) / 1000),
   };
 };
+
+export const padStart = (s: number, maxLength = 2, fillString = '0') => {
+  return String.prototype.padStart.call(s, maxLength, fillString);
+};
