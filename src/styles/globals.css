@@ -21,10 +21,10 @@ body,
 }
 
 body {
-  @apply flex justify-center bg-neutral-100;
+  @apply flex justify-center bg-neutral-100 dark:bg-black;
 }
 
 #__next {
-  @apply flex w-full max-w-lg flex-col  p-6 sm:p-8 space-y-6 sm:space-y-8 justify-between text-neutral-700;
+  @apply flex w-full max-w-lg flex-col p-6 sm:p-8 space-y-6 sm:space-y-8 justify-between text-neutral-700 dark:text-neutral-300;
   position: relative;
 }

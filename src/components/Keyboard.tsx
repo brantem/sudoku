@@ -1,7 +1,8 @@
+import { ButtonHTMLAttributes } from 'react';
 import { BackspaceIcon } from '@heroicons/react/24/solid';
 
 import { useSudokuStore } from 'lib/stores';
-import { ButtonHTMLAttributes, HTMLAttributes } from 'react';
+import { cn } from 'lib/helpers';
 
 export type KeyboardButtonProps = React.DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
@@ -21,7 +22,10 @@ const KeyboardButton = ({ value, children, ...props }: KeyboardButtonProps) => {
   return (
     <button
       {...props}
-      className="flex h-16 items-center justify-center bg-white text-4xl font-semibold tabular-nums hover:bg-neutral-100 disabled:bg-neutral-100"
+      className={cn(
+        'flex h-16 items-center justify-center bg-white text-4xl font-semibold tabular-nums hover:bg-neutral-100 disabled:bg-neutral-100',
+        'dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:disabled:bg-black',
+      )}
       disabled={isDisabled}
       onClick={updateCell}
     >
@@ -32,7 +36,12 @@ const KeyboardButton = ({ value, children, ...props }: KeyboardButtonProps) => {
 
 const Keyboard = () => {
   return (
-    <div className="grid-row-2 grid grid-cols-5 gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200">
+    <div
+      className={cn(
+        'grid-row-2 grid grid-cols-5 gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200',
+        'dark:border-neutral-800 dark:bg-neutral-800',
+      )}
+    >
       {[...new Array(9)].map((_, i) => (
         <KeyboardButton key={i} value={i + 1} data-testid="keyboard-button">
           {i + 1}

@@ -4,6 +4,7 @@ import Difficulty from 'components/Header/Difficulty';
 import Time from 'components/Header/Time';
 
 import { useSudokuStore } from 'lib/stores';
+import { cn } from 'lib/helpers';
 
 const Header = () => {
   const { isSolved, solve, generate } = useSudokuStore((state) => ({
@@ -23,7 +24,10 @@ const Header = () => {
       <div className="flex justify-end space-x-2">
         {!isSolved && (
           <button
-            className="flex h-8 w-8 items-center justify-center rounded-full border bg-white hover:bg-neutral-100"
+            className={cn(
+              'flex h-8 w-8 items-center justify-center rounded-full border border-neutral-200 bg-white hover:bg-neutral-100',
+              'dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+            )}
             onClick={solve}
             data-testid="header-solve"
           >
@@ -31,7 +35,10 @@ const Header = () => {
           </button>
         )}
         <button
-          className="flex h-8 w-8 items-center justify-center rounded-full border bg-white hover:bg-neutral-100"
+          className={cn(
+            'flex h-8 w-8 items-center justify-center rounded-full border border-neutral-200 bg-white hover:bg-neutral-100',
+            'dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+          )}
           onClick={generate}
           data-testid="header-generate"
         >
