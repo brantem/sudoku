@@ -10,7 +10,7 @@ export type KeyboardButtonProps = {
 const KeyboardButton = (props: KeyboardButtonProps) => {
   return (
     <button
-      className="flex h-16 items-center justify-center bg-white text-3xl font-semibold tabular-nums hover:bg-neutral-100"
+      className="flex h-16 items-center justify-center bg-white text-4xl font-semibold tabular-nums hover:bg-neutral-100"
       {...props}
     />
   );

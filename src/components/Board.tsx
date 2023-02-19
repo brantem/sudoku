@@ -29,7 +29,7 @@ const Board = () => {
               <button
                 key={j}
                 className={cn(
-                  'flex h-12 flex-1 items-center justify-center border-neutral-400 bg-white text-2xl font-semibold',
+                  'flex h-9 flex-1 items-center justify-center border-neutral-400 bg-white text-2xl font-semibold sm:h-12 sm:text-3xl',
                   j > 0 && 'border-l',
                   i % 3 !== 0 && 'border-t',
                   j > 0 && j % 3 === 0 && 'border-l-2',
