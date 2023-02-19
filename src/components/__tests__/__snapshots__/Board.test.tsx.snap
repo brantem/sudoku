@@ -1,0 +1,370 @@
+// Vitest Snapshot v1
+
+exports[`Board > render successfully 1`] = `
+<div>
+  <div
+    class="flex flex-col overflow-hidden rounded-xl border-[3px] border-neutral-500"
+  >
+    <div
+      class="flex"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex border-t-2 border-neutral-400"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex border-t-2 border-neutral-400"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+    <div
+      class="flex"
+    >
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-t border-l-2 bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+      <button
+        class="flex h-12 flex-1 items-center justify-center border-neutral-400 text-2xl font-semibold border-l border-t bg-neutral-200 hover:bg-neutral-200/50"
+        data-active="false"
+      />
+    </div>
+  </div>
+</div>
+`;
