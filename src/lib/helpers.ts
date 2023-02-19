@@ -17,3 +17,12 @@ export const getTimeDiff = (a: number, b: number) => {
 export const padStart = (s: number, maxLength = 2, fillString = '0') => {
   return String.prototype.padStart.call(s, maxLength, fillString);
 };
+
+export const shuffle = <T>(a: T[]): T[] => {
+  const b = [...a];
+  for (let i = b.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [b[i], b[j]] = [b[j], b[i]];
+  }
+  return b;
+};
