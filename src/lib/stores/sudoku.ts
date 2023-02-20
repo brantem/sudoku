@@ -140,18 +140,22 @@ export const sudokuStore = createStore<SudokuState>()(
       coord: null,
       setCoord: (coord) => set({ coord }),
       updateCell: (value) => {
-        const { board, values, generate, filled, coord } = get();
+        const { board, values, coord } = get();
         if (!coord) return;
 
         const [x, y] = coord;
         if (board[x][y][1] < 0 || board[x][y][0] === board[x][y][1]) return;
+        if (board[x][y][1] === value) value = 0;
 
-        if (board[x][y][1] !== 0) values[board[x][y][1]]--;
-        if (value !== 0) values[value] = (values[value] || 0) + 1;
+        let filled = get().filled;
+        if (board[x][y][0] === value) {
+          if (board[x][y][1] !== 0) values[board[x][y][1]]--;
+          if (value !== 0) values[value] = (values[value] || 0) + 1;
+          filled = value === board[x][y][0] ? filled + 1 : filled;
+        }
 
         board[x][y][1] = value;
-        const _filled = value === board[x][y][0] ? filled + 1 : filled;
-        set({ board, values, filled: _filled, completedAt: _filled === 81 ? Date.now() : null });
+        set({ board, values, filled, completedAt: filled === 81 ? Date.now() : null });
       },
     }),
     { name: 'sudoku' },

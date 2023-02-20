@@ -57,12 +57,21 @@ describe('sudokuStore', () => {
   it('should update correctly', async () => {
     act(() => sudokuStore.setState({ board: [[[1, 0]]], coord: [0, 0] }));
     expect(sudokuStore.getState().values).toEqual({});
+
+    // set to 2 (incorrect)
     act(() => sudokuStore.getState().updateCell(2));
     expect(sudokuStore.getState().board[0][0]).toEqual([1, 2]);
-    expect(sudokuStore.getState().values).toEqual({ 2: 1 });
+    expect(sudokuStore.getState().values).toEqual({});
+
+    // set to 2 (should set as 0)
+    act(() => sudokuStore.getState().updateCell(2));
+    expect(sudokuStore.getState().board[0][0]).toEqual([1, 0]);
+    expect(sudokuStore.getState().values).toEqual({});
+
+    // set to 1 (correct)
     act(() => sudokuStore.getState().updateCell(1));
     expect(sudokuStore.getState().board[0][0]).toEqual([1, 1]);
-    expect(sudokuStore.getState().values).toEqual({ 1: 1, 2: 0 });
+    expect(sudokuStore.getState().values).toEqual({ 1: 1 });
   });
 
   it("shouldn't update cell if coord is null", async () => {
