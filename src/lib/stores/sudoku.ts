@@ -150,7 +150,6 @@ export const sudokuStore = createStore<SudokuState>()(
         board[x][y][1] = value;
         const _filled = value === board[x][y][0] ? filled + 1 : filled;
         set({ board, values, filled: _filled, completedAt: _filled === 81 ? Date.now() : null });
-        if (_filled === 81) setTimeout(generate, 1000);
       },
     }),
     { name: 'sudoku' },
