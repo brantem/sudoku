@@ -23,7 +23,7 @@ const KeyboardButton = ({ value, children, ...props }: KeyboardButtonProps) => {
     <button
       {...props}
       className={cn(
-        'flex h-16 items-center justify-center bg-white text-4xl font-semibold tabular-nums hover:bg-neutral-100 disabled:bg-neutral-100',
+        'flex h-16 items-center justify-center bg-white text-4xl font-semibold tabular-nums hover:bg-neutral-100 disabled:bg-neutral-100 disabled:text-neutral-500',
         'dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:disabled:bg-black',
       )}
       disabled={isDisabled}

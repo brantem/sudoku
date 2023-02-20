@@ -14,7 +14,7 @@ const Difficulty = () => {
     <Select
       value={difficulty.toString()}
       renderValue={() => (
-        <div className="flex space-x-0.5">
+        <div className="flex space-x-1">
           {[...new Array(difficulty)].map((_, i) => (
             <div key={i} className={cn('h-4 w-1 rounded-full bg-neutral-700', 'dark:bg-white')} />
           ))}

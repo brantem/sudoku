@@ -13,9 +13,17 @@ const Board = () => {
 
   return (
     <div className="relative">
-      <div className="flex flex-col overflow-hidden rounded-xl border-[3px] border-neutral-500">
+      <div
+        className={cn(
+          'flex flex-col overflow-hidden rounded-xl border-[3px] border-neutral-400',
+          'dark:border-neutral-500',
+        )}
+      >
         {[...new Array(size)].map((_, x) => (
-          <div key={x} className={cn('flex', x > 0 && x % 3 === 0 && 'border-t-[3px] border-neutral-500')}>
+          <div
+            key={x}
+            className={cn('flex', x > 0 && x % 3 === 0 && 'border-t-[3px] border-neutral-400 dark:border-neutral-500')}
+          >
             {[...new Array(size)].map((_, y) => {
               const cell = board.length ? board[x][y] : [0, 0];
               const value = cell[1] < 0 ? cell[0] : cell[1] === 0 ? '' : cell[1];
@@ -32,8 +40,8 @@ const Board = () => {
                 <button
                   key={y}
                   className={cn(
-                    'flex h-[42px] flex-1 items-center justify-center border-neutral-500 bg-white text-2xl font-semibold sm:h-14 sm:text-3xl',
-                    'dark:bg-neutral-800',
+                    'flex h-[42px] flex-1 items-center justify-center border-neutral-400 bg-white text-2xl font-semibold sm:h-14 sm:text-3xl',
+                    'dark:border-neutral-500 dark:bg-neutral-800',
                     y > 0 && 'border-l',
                     x % 3 !== 0 && 'border-t',
                     y > 0 && y % 3 === 0 && 'border-l-[3px]',
@@ -54,9 +62,17 @@ const Board = () => {
       </div>
 
       {(!board.length || isSolved) && (
-        <div className="absolute inset-0 flex h-full w-full items-center justify-center rounded-xl bg-white/75 dark:bg-black/75">
+        <div
+          className={cn(
+            'absolute inset-0 flex h-full w-full items-center justify-center rounded-xl bg-white/75',
+            'dark:bg-black/75',
+          )}
+        >
           <button
-            className="rounded-full bg-neutral-700 px-6 py-1.5 text-lg text-white dark:bg-white dark:text-neutral-700"
+            className={cn(
+              'rounded-full bg-neutral-700 px-6 py-1.5 text-lg text-white hover:bg-neutral-600',
+              'dark:bg-white dark:text-neutral-700 dark:hover:bg-neutral-200',
+            )}
             onClick={generate}
           >
             {isSolved ? 'New Board' : 'Start'}
