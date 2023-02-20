@@ -36,8 +36,8 @@ const Board = () => {
                   y > 0 && y % 3 === 0 && 'border-l-[3px]',
                   (isFilled || value === cell[0]) && 'bg-neutral-200 dark:bg-neutral-900',
                   shouldActive || isActive
-                    ? 'bg-blue-200 dark:bg-blue-600'
-                    : 'hover:bg-blue-100 dark:hover:bg-blue-900',
+                    ? 'bg-blue-300 dark:bg-blue-700'
+                    : 'hover:bg-blue-200 dark:hover:bg-blue-900',
                 )}
                 data-active={shouldActive || isActive}
                 onClick={() => setCoord([x, y])}
