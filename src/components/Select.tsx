@@ -29,6 +29,7 @@ export const Option = forwardRef<HTMLDivElement, OptionProps>(({ value, children
 Option.displayName = 'Option';
 
 type SelectProps = {
+  className?: string;
   value: string;
   renderValue?: (value: string) => React.ReactNode;
   onChange: (value: string) => void;
@@ -37,13 +38,14 @@ type SelectProps = {
   children: React.ReactNode;
 };
 
-const Select = ({ value, renderValue, onChange, label, placeholder, children }: SelectProps) => {
+const Select = ({ className, value, renderValue, onChange, label, placeholder, children }: SelectProps) => {
   return (
     <SelectPrimitive.Root value={value} onValueChange={onChange}>
       <SelectPrimitive.Trigger
         className={cn(
           'flex h-8 items-center rounded-full border border-neutral-200 bg-white px-3 hover:bg-neutral-100',
           'dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+          className,
         )}
         aria-label={label}
       >

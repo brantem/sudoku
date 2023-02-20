@@ -1,6 +1,7 @@
 import { ArrowPathIcon, CheckIcon } from '@heroicons/react/20/solid';
 
 import Difficulty from 'components/Header/Difficulty';
+import Theme from 'components/Header/Theme';
 import Time from 'components/Header/Time';
 
 import { useSudokuStore } from 'lib/stores';
@@ -15,8 +16,9 @@ const Header = () => {
 
   return (
     <div className="grid w-full grid-cols-3 text-sm font-semibold">
-      <div className="flex">
+      <div className="flex space-x-2">
         <Difficulty />
+        <Theme />
       </div>
       <div className="flex justify-center">
         <Time />
