@@ -62,6 +62,21 @@ const fillCell = (board: Board, x: number, y: number) => {
   }
 };
 
+const getNumFilledCells = (difficulty: Difficulty) => {
+  switch (difficulty) {
+    case Difficulty.Easy:
+      return 61;
+    case Difficulty.Medium:
+      return 52;
+    case Difficulty.Hard:
+      return 43;
+    case Difficulty.VeryHard:
+      return 34;
+    case Difficulty.Insane:
+      return 25;
+  }
+};
+
 export const sudokuStore = createStore<SudokuState>()(
   persist(
     (set, get) => ({
@@ -93,7 +108,7 @@ export const sudokuStore = createStore<SudokuState>()(
 
         const values: Record<number, number> = {};
         let filled = 0;
-        for (let i = 0; i < get().difficulty; i++) {
+        for (let i = 0; i < getNumFilledCells(get().difficulty); i++) {
           const [x, y] = coords[i];
           board[x][y][1] = board[x][y][0] * -1;
           values[board[x][y][0]] = (values[board[x][y][0]] || 0) + 1;

@@ -24,7 +24,7 @@ const Theme = () => {
       onChange={(value) => setTheme(value)}
       label="Theme"
       placeholder="Select a theme"
-      className="flex h-8 w-8 justify-center px-0"
+      className="w-8 px-0"
     >
       <Option value="system">System</Option>
       <Option value="dark">Dark</Option>

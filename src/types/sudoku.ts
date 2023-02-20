@@ -1,9 +1,9 @@
 export enum Difficulty {
-  Easy = 61,
-  Medium = 52,
-  Hard = 43,
-  VeryHard = 34,
-  Insane = 25,
+  Easy = 1,
+  Medium,
+  Hard,
+  VeryHard,
+  Insane,
 }
 
 export type Coord = [number, number];

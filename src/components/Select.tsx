@@ -43,7 +43,7 @@ const Select = ({ className, value, renderValue, onChange, label, placeholder, c
     <SelectPrimitive.Root value={value} onValueChange={onChange}>
       <SelectPrimitive.Trigger
         className={cn(
-          'flex h-8 items-center rounded-full border border-neutral-200 bg-white px-3 hover:bg-neutral-100',
+          'flex h-8 items-center justify-center rounded-full border border-neutral-200 bg-white px-3 hover:bg-neutral-100',
           'dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800',
           className,
         )}
