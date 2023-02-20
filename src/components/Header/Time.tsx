@@ -31,7 +31,7 @@ const Time = () => {
     <div
       className={cn(
         'flex h-8 items-center rounded-full border border-neutral-200 bg-white px-3 tabular-nums',
-        'dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+        'dark:border-neutral-800 dark:bg-neutral-900',
       )}
     >
       {data.hours ? `${data.hours}:${padStart(data.minutes, 2, '0')}` : data.minutes}:{padStart(data.seconds, 2, '0')}

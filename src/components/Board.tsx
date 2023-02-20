@@ -32,16 +32,14 @@ const Board = () => {
               <button
                 key={y}
                 className={cn(
-                  'flex h-9 flex-1 items-center justify-center border-neutral-400 bg-white text-2xl font-semibold sm:h-12 sm:text-3xl',
+                  'flex h-[42px] flex-1 items-center justify-center border-neutral-400 bg-white text-2xl font-semibold sm:h-14 sm:text-3xl',
                   'dark:border-neutral-600 dark:bg-neutral-800',
                   y > 0 && 'border-l',
                   x % 3 !== 0 && 'border-t',
                   y > 0 && y % 3 === 0 && 'border-l-2',
                   (isFilled || value === cell[0]) && 'bg-neutral-200 dark:bg-neutral-900',
                   shouldActive || isActive
-                    ? 'bg-blue-200 dark:bg-blue-800'
-                    : isFilled
-                    ? 'hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50'
+                    ? 'bg-blue-200 dark:bg-blue-600'
                     : 'hover:bg-blue-100 dark:hover:bg-blue-900',
                 )}
                 data-active={shouldActive || isActive}
