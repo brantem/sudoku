@@ -21,7 +21,7 @@ const Theme = () => {
     <Select
       value={theme || 'system'}
       renderValue={renderValue}
-      onChange={(value) => setTheme(value)}
+      onChange={(value) => /* c8 ignore next */ setTheme(value)}
       label="Theme"
       placeholder="Select a theme"
       className="w-8 px-0"

@@ -6,7 +6,7 @@ import Header from 'components/Header';
 import { sudokuStore, useSudokuStore } from 'lib/stores';
 
 describe('Header', () => {
-  afterEach(() => {
+  beforeEach(() => {
     act(() => sudokuStore.setState({ filled: 0 }));
   });
 

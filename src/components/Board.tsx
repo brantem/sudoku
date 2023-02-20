@@ -19,12 +19,15 @@ const Board = () => {
             {[...new Array(size)].map((_, y) => {
               const cell = board.length ? board[x][y] : [0, 0];
               const value = cell[1] < 0 ? cell[0] : cell[1] === 0 ? '' : cell[1];
+
               const isFilled = cell[1] + cell[0] === 0;
               const isActive = coord ? coord[0] === x && coord[1] === y : false;
+
               const activeCell = coord && board[coord[0]][coord[1]];
               const shouldActive = activeCell
                 ? activeCell[1] !== 0 && activeCell[activeCell[1] > 0 ? 1 : 0] === value
                 : false;
+
               return (
                 <button
                   key={y}

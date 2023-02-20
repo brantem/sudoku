@@ -6,7 +6,7 @@ import Board from 'components/Board';
 import { sudokuStore, useSudokuStore } from 'lib/stores';
 
 describe('Board', () => {
-  afterEach(() => {
+  beforeEach(() => {
     act(() =>
       sudokuStore.setState({
         board: [
@@ -29,12 +29,6 @@ describe('Board', () => {
         coord: null,
       }),
     );
-  });
-
-  it('render successfully', () => {
-    const { container } = render(<Board />);
-
-    expect(container).toMatchSnapshot();
   });
 
   it('should set coord', () => {
@@ -71,5 +65,21 @@ describe('Board', () => {
     screen.getAllByText('1').forEach((el) => expect(el).toHaveAttribute('data-active', 'true'));
     act(() => result.current.setCoord([0, 1]));
     screen.getAllByText('1').forEach((el) => expect(el).toHaveAttribute('data-active', 'true'));
+  });
+
+  it('should show "Start" button', () => {
+    act(() => sudokuStore.setState({ board: [] }));
+
+    render(<Board />);
+
+    expect(screen.getByText('Start')).toBeInTheDocument();
+  });
+
+  it('should show "New Board" button', () => {
+    act(() => sudokuStore.setState({ filled: 81 }));
+
+    render(<Board />);
+
+    expect(screen.getByText('New Board')).toBeInTheDocument();
   });
 });

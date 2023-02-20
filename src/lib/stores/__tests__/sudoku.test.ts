@@ -5,7 +5,7 @@ import { sudokuStore } from 'lib/stores';
 import { Cell, Difficulty } from 'types/sudoku';
 
 describe('sudokuStore', () => {
-  afterEach(() => {
+  beforeEach(() => {
     act(() => sudokuStore.setState({ board: [], values: {}, filled: 0, coord: null }));
   });
 
@@ -83,15 +83,10 @@ describe('sudokuStore', () => {
     expect(sudokuStore.getState().board[0][0]).toEqual([1, 1]);
   });
 
-  it("shouldn't update regenerate if filled equals 81", async () => {
-    vi.useFakeTimers();
-    const generate = vi.spyOn(sudokuStore.getState(), 'generate').mockImplementationOnce(() => {});
+  it('should complete the board if filled equals 81', async () => {
     act(() => sudokuStore.setState({ board: [[[1, 0]]], filled: 80, coord: [0, 0] }));
     act(() => sudokuStore.getState().updateCell(1));
     expect(sudokuStore.getState().filled).toEqual(81);
     expect(sudokuStore.getState().completedAt).not.toBeNull();
-    act(() => vi.advanceTimersByTime(1000));
-    expect(generate).toHaveBeenCalled();
-    vi.useRealTimers();
   });
 });

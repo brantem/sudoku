@@ -6,7 +6,7 @@ import Keyboard from 'components/Keyboard';
 import { sudokuStore, useSudokuStore } from 'lib/stores';
 
 describe('Keyboard', () => {
-  afterEach(() => {
+  beforeEach(() => {
     act(() => sudokuStore.setState({ values: {}, filled: 0 }));
   });
 

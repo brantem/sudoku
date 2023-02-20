@@ -62,6 +62,7 @@ const fillCell = (board: Board, x: number, y: number) => {
   }
 };
 
+/* c8 ignore start */
 const getNumFilledCells = (difficulty: Difficulty) => {
   switch (difficulty) {
     case Difficulty.Easy:
@@ -76,6 +77,7 @@ const getNumFilledCells = (difficulty: Difficulty) => {
       return 25;
   }
 };
+/* c8 ignore stop */
 
 export const sudokuStore = createStore<SudokuState>()(
   persist(

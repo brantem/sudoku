@@ -49,11 +49,7 @@ const Select = ({ className, value, renderValue, onChange, label, placeholder, c
         )}
         aria-label={label}
       >
-        {renderValue ? (
-          <SelectPrimitive.Value placeholder={placeholder}>{renderValue(value)}</SelectPrimitive.Value>
-        ) : (
-          <SelectPrimitive.Value placeholder={placeholder} />
-        )}
+        <SelectPrimitive.Value placeholder={placeholder}>{renderValue?.(value)}</SelectPrimitive.Value>
       </SelectPrimitive.Trigger>
       <SelectPrimitive.Portal>
         <SelectPrimitive.Content

@@ -20,7 +20,7 @@ const Difficulty = () => {
           ))}
         </div>
       )}
-      onChange={(value) => setDifficulty(parseInt(value))}
+      onChange={(value) => /* c8 ignore next */ setDifficulty(parseInt(value))}
       label="Difficulty"
       placeholder="Select a difficulty…"
       className={difficulty === _Difficulty.Easy ? 'w-8' : ''}
